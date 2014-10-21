@@ -28,14 +28,15 @@
 /* Begin PBXFileReference section */
 		C163DF7919F651FD00ACB0E9 /* Postcard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Postcard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C163DF7D19F651FD00ACB0E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C163DF7E19F651FD00ACB0E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C163DF8019F651FD00ACB0E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C163DF7E19F651FD00ACB0E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
+		C163DF8019F651FD00ACB0E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		C163DF8319F651FD00ACB0E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C163DF8519F651FD00ACB0E9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C163DF8519F651FD00ACB0E9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		C163DF8819F651FD00ACB0E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C163DF8E19F651FD00ACB0E9 /* PostcardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostcardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C163DF9319F651FD00ACB0E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C163DF9419F651FD00ACB0E9 /* PostcardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcardTests.swift; sourceTree = "<group>"; };
+		C163DFA119F6537600ACB0E9 /* Postcard.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Postcard.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +78,8 @@
 		C163DF7B19F651FD00ACB0E9 /* Postcard */ = {
 			isa = PBXGroup;
 			children = (
-				C163DF7E19F651FD00ACB0E9 /* AppDelegate.swift */,
-				C163DF8019F651FD00ACB0E9 /* ViewController.swift */,
-				C163DF8219F651FD00ACB0E9 /* Main.storyboard */,
-				C163DF8519F651FD00ACB0E9 /* Images.xcassets */,
-				C163DF8719F651FD00ACB0E9 /* LaunchScreen.xib */,
+				C163DFA019F6531F00ACB0E9 /* UI */,
+				C163DF9E19F6527100ACB0E9 /* Controllers */,
 				C163DF7C19F651FD00ACB0E9 /* Supporting Files */,
 			);
 			path = Postcard;
@@ -98,6 +96,7 @@
 		C163DF9119F651FD00ACB0E9 /* PostcardTests */ = {
 			isa = PBXGroup;
 			children = (
+				C163DFA119F6537600ACB0E9 /* Postcard.playground */,
 				C163DF9419F651FD00ACB0E9 /* PostcardTests.swift */,
 				C163DF9219F651FD00ACB0E9 /* Supporting Files */,
 			);
@@ -110,6 +109,25 @@
 				C163DF9319F651FD00ACB0E9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C163DF9E19F6527100ACB0E9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C163DF7E19F651FD00ACB0E9 /* AppDelegate.swift */,
+				C163DF8019F651FD00ACB0E9 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C163DFA019F6531F00ACB0E9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C163DF8219F651FD00ACB0E9 /* Main.storyboard */,
+				C163DF8719F651FD00ACB0E9 /* LaunchScreen.xib */,
+				C163DF8519F651FD00ACB0E9 /* Images.xcassets */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +260,7 @@
 				C163DF8319F651FD00ACB0E9 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		C163DF8719F651FD00ACB0E9 /* LaunchScreen.xib */ = {
@@ -250,6 +269,7 @@
 				C163DF8819F651FD00ACB0E9 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
