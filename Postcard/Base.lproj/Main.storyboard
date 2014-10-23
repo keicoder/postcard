@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,11 +16,80 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fp-7L-7y6">
+                                <rect key="frame" x="16" y="20" width="568" height="580"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxS-NI-EEz">
+                                        <rect key="frame" x="266" y="211" width="35" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoX-RV-NcH">
+                                        <rect key="frame" x="242" y="36" width="85" height="30"/>
+                                        <state key="normal" title="Swift Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nWb-r5-c7L">
+                                        <rect key="frame" x="223" y="90" width="123" height="29"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W23-N1-P9a">
+                                        <rect key="frame" x="91" y="147" width="384" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="384" id="eDz-k1-R0b"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="l0o-HS-E6v">
+                                        <rect key="frame" x="89" y="243" width="388" height="31"/>
+                                    </slider>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A21-FI-kEM">
+                                        <rect key="frame" x="260" y="306" width="51" height="31"/>
+                                    </switch>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="WzR-cc-Icr">
+                                        <rect key="frame" x="138" y="41" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="SxS-NI-EEz" firstAttribute="centerX" secondItem="l0o-HS-E6v" secondAttribute="centerX" id="2cH-Qz-sjD"/>
+                                    <constraint firstItem="XoX-RV-NcH" firstAttribute="top" secondItem="6fp-7L-7y6" secondAttribute="top" constant="36" id="4EU-KW-6hS"/>
+                                    <constraint firstItem="l0o-HS-E6v" firstAttribute="top" secondItem="SxS-NI-EEz" secondAttribute="bottom" constant="14" id="73A-1x-ph8"/>
+                                    <constraint firstItem="nWb-r5-c7L" firstAttribute="centerX" secondItem="A21-FI-kEM" secondAttribute="centerX" id="DjL-3S-VSw"/>
+                                    <constraint firstItem="W23-N1-P9a" firstAttribute="leading" secondItem="6fp-7L-7y6" secondAttribute="leading" constant="91" id="IVV-74-jYP"/>
+                                    <constraint firstItem="A21-FI-kEM" firstAttribute="top" secondItem="l0o-HS-E6v" secondAttribute="bottom" constant="33" id="JBW-cQ-NIP"/>
+                                    <constraint firstItem="W23-N1-P9a" firstAttribute="leading" secondItem="l0o-HS-E6v" secondAttribute="leading" id="K43-Yr-qwp"/>
+                                    <constraint firstItem="nWb-r5-c7L" firstAttribute="centerX" secondItem="XoX-RV-NcH" secondAttribute="centerX" id="L6b-kc-YdJ"/>
+                                    <constraint firstItem="nWb-r5-c7L" firstAttribute="centerX" secondItem="6fp-7L-7y6" secondAttribute="centerX" id="O8v-P3-NYR"/>
+                                    <constraint firstItem="W23-N1-P9a" firstAttribute="trailing" secondItem="l0o-HS-E6v" secondAttribute="trailing" id="Tch-A5-ad0"/>
+                                    <constraint firstAttribute="bottom" secondItem="WzR-cc-Icr" secondAttribute="bottom" constant="189" id="Uzc-PS-Aus"/>
+                                    <constraint firstItem="l0o-HS-E6v" firstAttribute="centerX" secondItem="WzR-cc-Icr" secondAttribute="centerX" id="XUw-ef-1Pv"/>
+                                    <constraint firstItem="nWb-r5-c7L" firstAttribute="top" secondItem="XoX-RV-NcH" secondAttribute="bottom" constant="24" id="YwT-p1-Dbh"/>
+                                    <constraint firstAttribute="trailing" secondItem="W23-N1-P9a" secondAttribute="trailing" constant="93" id="fub-l4-PEQ"/>
+                                    <constraint firstItem="SxS-NI-EEz" firstAttribute="top" secondItem="W23-N1-P9a" secondAttribute="bottom" constant="34" id="tHe-Fb-SkA"/>
+                                    <constraint firstItem="WzR-cc-Icr" firstAttribute="top" secondItem="A21-FI-kEM" secondAttribute="bottom" constant="34" id="uIQ-Cs-PeC"/>
+                                    <constraint firstItem="W23-N1-P9a" firstAttribute="top" secondItem="nWb-r5-c7L" secondAttribute="bottom" constant="29" id="ySf-N1-02b"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6fp-7L-7y6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5J9-6d-cMw"/>
+                            <constraint firstItem="6fp-7L-7y6" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="LJm-9K-Thw"/>
+                            <constraint firstItem="6fp-7L-7y6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="WkF-UU-ql8"/>
+                            <constraint firstItem="6fp-7L-7y6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="nfg-k5-KED"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="369" y="474"/>
         </scene>
     </scenes>
 </document>
